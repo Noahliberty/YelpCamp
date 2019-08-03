@@ -18,8 +18,8 @@ var commentRoutes    = require("./routes/comments"),
 
  
 //create yelpcamp db and connect to DB depending on enviromnet
-var url = process.env.DATABASEURL || "mongodb://localhost:27017/yelp_camp_v13";
-
+var url = process.env.DATABASEURL;
+// || "mongodb://localhost:27017/yelp_camp_v12"
 mongoose.connect(url, { useNewUrlParser: true}); 
 
 app.use(bodyParser.urlencoded({extended: true}));
